@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midias em HTML5</title>
+</head>
+<body>
+  <h1>imagem dinâmica</h1> 
+  <p>tente abrir esse site em varios dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p> 
+
+  <picture>
+    <source media="(min-width:750px )" srcset="imagens/foto-p.png" type="image/png">
+    <source media="(mix-width:1050px )" srcset="imagens/foto-m.png" type="image/">
+    <img src="imagens/foto-g.png" alt="imagem flexivel">
+  </picture>
+  <h1>reproduzindo áudio</h1>
+  <p>vamos aprender a reproduzir audios em html5</p>
+  <audio src="midia/Sly Sky - Telecasted.mp3" control autoplay></audio>
+  <!--mp3 wav ogg-->
+  <audio preload="metadata" autoplay controls>
+    <source src="midia/Sly Sky - Telecasted.mp3" type="audio/mpeg">
+    <source src="midia/Sly Sky - Telecasted.mp3" type="audio/ogg">
+    <source src="midia/Sly Sky - Telecasted.mp3" type="audio/wav">
+  </audio>
+  <p>infelizmente seu navegador nâo consegue reproduzir audio. <a href="midia/Sly Sky - Telecasted.mp3">clique aqui para baixar o arquivo mp3</a></p>
+</body>
+</html>
