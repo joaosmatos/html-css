@@ -2,6 +2,93 @@
 
 /* Todas as midias */
 
+/* Typical device breakpoints
+pequenas telas: até 600px
+celular: de 600px até 768px
+tablet:768px até 992px
+desktop:992px até 1200px
+grandes telas:acima de 1200px
+
+valores atualizados
+mobile: 320px - 767px
+tablet: 768px - 1024px
+desktop: 1025px
+
+320px - 480px: Smartphones menores no modo retrato.
+481px - 767px: smartphones maiores (paisagem) e tablets menores (retrato).
+768px - 1024px: Tablets maiores (paisagem).
+1025px - 1200px: laptops e desktops menores.
+1201px e superior: monitores de laptop e desktop maiores. 
+*/
+
 @media print {
-    
+
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        background-image: url(../imagens/back-print.jpg); /* desnecessario */
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa Impressão foi feita atraves do site www.cursoemvideo.com';
+        text-decoration: overline;
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone { display: block; }
+    img#tablet { display: none; }
+    img#print { display: block; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: block; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+
+    img#phone { display: none; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: block; }
+    img#tv { display: none; }
+}
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 700px;
+    }
+
+    img#phone { display: block; }
+    img#tablet { display: none; }
+    img#print { display: none; }
+    img#pc { display: none; }
+    img#tv { display: block; }
 }
